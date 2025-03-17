@@ -1,0 +1,24 @@
+entity Aluno(alunos) {
+    nome String required minlength(3)
+    serie Integer min(1) max(3)
+    jaFezEnem Boolean
+    faculdadePreferida String minlength(3)
+    cursoPreferido String minlength(5)
+}
+
+entity Meta(metas)  {
+    area AreaDoEnem required
+    nota Integer required min(200) max(1000)    
+}
+
+enum AreaDoEnem {
+    LINGUAGENS, HUMANAS, NATUREZA, MATEMATICA, REDACAO
+}
+
+relationship OneToOne {
+    Aluno{user(login) required} to User with builtInEntity
+}
+
+relationship ManyToOne {
+    Meta{aluno(nome) required} to Aluno
+}

@@ -1,0 +1,51 @@
+{
+  "annotations": {
+    "changelogDate": "20250315160057"
+  },
+  "applications": "*",
+  "entityTableName": "alunos",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength"],
+      "fieldValidateRulesMinlength": "3"
+    },
+    {
+      "fieldName": "serie",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max"],
+      "fieldValidateRulesMax": "3",
+      "fieldValidateRulesMin": "1"
+    },
+    {
+      "fieldName": "jaFezEnem",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "faculdadePreferida",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength"],
+      "fieldValidateRulesMinlength": "3"
+    },
+    {
+      "fieldName": "cursoPreferido",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength"],
+      "fieldValidateRulesMinlength": "5"
+    }
+  ],
+  "name": "Aluno",
+  "relationships": [
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "relationshipName": "user",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one",
+      "relationshipValidateRules": "required",
+      "relationshipWithBuiltInEntity": true
+    }
+  ],
+  "searchEngine": "no"
+}

@@ -1,0 +1,54 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (aluno(); as alunoRef) {
+      <div>
+        <h2 data-cy="alunoDetailsHeading"><span jhiTranslate="caseGamaEstagioApp.aluno.detail.title">Aluno</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ alunoRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="caseGamaEstagioApp.aluno.nome">Nome</span></dt>
+          <dd>
+            <span>{{ alunoRef.nome }}</span>
+          </dd>
+          <dt><span jhiTranslate="caseGamaEstagioApp.aluno.serie">Serie</span></dt>
+          <dd>
+            <span>{{ alunoRef.serie }}</span>
+          </dd>
+          <dt><span jhiTranslate="caseGamaEstagioApp.aluno.jaFezEnem">Ja Fez Enem</span></dt>
+          <dd>
+            <span>{{ alunoRef.jaFezEnem }}</span>
+          </dd>
+          <dt><span jhiTranslate="caseGamaEstagioApp.aluno.faculdadePreferida">Faculdade Preferida</span></dt>
+          <dd>
+            <span>{{ alunoRef.faculdadePreferida }}</span>
+          </dd>
+          <dt><span jhiTranslate="caseGamaEstagioApp.aluno.cursoPreferido">Curso Preferido</span></dt>
+          <dd>
+            <span>{{ alunoRef.cursoPreferido }}</span>
+          </dd>
+          <dt><span jhiTranslate="caseGamaEstagioApp.aluno.user">User</span></dt>
+          <dd>
+            <span>{{ alunoRef.user?.login }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/aluno', alunoRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>
