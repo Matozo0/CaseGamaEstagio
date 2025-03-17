@@ -9,18 +9,22 @@ A aplicação permite que o administrador (login: admin, senha: admin) realize a
 *Cadastro de Metas:* Associação de metas de notas para cada área do ENEM (LINGUAGENS, HUMANAS, NATUREZA, MATEMATICA e REDACAO). Cada aluno poderá ter, no máximo, uma meta para cada área.
 
 ## Tecnologias Utilizadas
-*Backend:* Java, Spring Boot
-*Frontend:* Angular (TypeScript, HTML, CSS)
-*Banco de Dados:* PostgreSQL
+- *Backend:* Java, Spring Boot
+- *Frontend:* Angular (TypeScript, HTML, CSS)
+- *Banco de Dados:* PostgreSQL
+
+## Pré Requisitos
+- Java 17
+- Node.js e npm
 
 ## Execução da Aplicação
 ### Inicie o Backend:
 ```bash
 ./mvnw
 ```
-###Acesse a aplicação:
+### Acesse a aplicação:
 Abra seu navegador e vá para http://localhost:8080.
 
-Utilize o acesso de administrador:
+### Utilize o acesso de administrador:
 Login: admin
 Senha: admin
